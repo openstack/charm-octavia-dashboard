@@ -1,0 +1,14 @@
+name: octavia-dashboard
+summary: OpenStack network load balancing Dashboard
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+description: |
+  This is the dashboard for the OpenStack LBaaS service, Octavia.
+tags:
+  - openstack
+series:
+  - bionic
+subordinate: true
+requires:
+  dashboard:
+    interface: dashboard-plugin
+    scope: container
