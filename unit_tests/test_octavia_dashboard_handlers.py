@@ -42,11 +42,15 @@ class TestRegisteredHooks(test_utils.TestRegisteredHooks):
 
 class TestOctaviaDashboardHandlers(test_utils.PatchHelper):
 
+    def setUp(self):
+        super().setUp()
+        self.octavia_dashboard_charm = mock.MagicMock()
+        self.patch_object(handlers.charm, 'provide_charm_instance',
+                          new=mock.MagicMock())
+        self.provide_charm_instance().__enter__.return_value = \
+            self.octavia_dashboard_charm
+        self.provide_charm_instance().__exit__.return_value = None
+
     def test_dashboard_available(self):
-        self.patch_object(handlers.reactive, 'endpoint_from_flag')
-        dashboard = mock.MagicMock()
-        self.endpoint_from_flag.return_value = dashboard
         handlers.dashboard_available()
-        self.endpoint_from_flag.assert_called_once_with('dashboard.available')
-        dashboard.publish_plugin_info.assert_called_once_with(
-            {'setting-one-key': 'value-one'}, 'priority')
+        self.octavia_dashboard_charm.assess_status.assert_called_once_with()

@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import charmhelpers.core as ch_core
-
 import charms.reactive as reactive
 
 import charms_openstack.bus
@@ -32,8 +30,6 @@ charm.use_defaults(
 def dashboard_available():
     """Relation to OpenStack Dashboard principal charm complete.
     """
-    dashboard = reactive.endpoint_from_flag('dashboard.available')
-    ch_core.hookenv.log('DEBUG: dashboard_available "{}" "{}" "{}"'
-                        .format(dashboard.release, dashboard.bin_path,
-                                dashboard.openstack_dir))
-    dashboard.publish_plugin_info({'setting-one-key': 'value-one'}, 'priority')
+    # config and restart is handled by package install, just update our status
+    with charm.provide_charm_instance() as octavia_dashboard_charm:
+        octavia_dashboard_charm.assess_status()
