@@ -1,9 +1,16 @@
 charm_name: octavia-dashboard
 gate_bundles:
 - bionic-rocky
-- cosmic-rocky
 smoke_bundles:
 - bionic-rocky
+comment: |
+  Disable ``cosmic-rocky`` bundle pending SRU of ``octavia-dashboard`` package.
+dev_bundles:
+- cosmic-rocky
+target_deploy_status:
+  octavia:
+    workload-status: blocked
+    workload-status-message: Awaiting
 configure:
 - zaza.charm_tests.noop.setup.basic_setup
 tests:
