@@ -12,3 +12,4 @@ config:
     - verbose
     - use-internal-endpoints
     - use-syslog
+    - ssl_ca
