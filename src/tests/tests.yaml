@@ -1,12 +1,15 @@
 charm_name: octavia-dashboard
 gate_bundles:
 - bionic-rocky
+- bionic-stein
 smoke_bundles:
 - bionic-rocky
 comment: |
+  Disable ``disco-stein`` bundle pending resolution of LP: #1824112
   Disable ``cosmic-rocky`` bundle pending SRU of ``octavia-dashboard`` package.
 dev_bundles:
 - cosmic-rocky
+- disco-stein
 target_deploy_status:
   octavia:
     workload-status: blocked

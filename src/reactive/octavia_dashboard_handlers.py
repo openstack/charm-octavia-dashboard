@@ -23,7 +23,8 @@ charms_openstack.bus.discover()
 charm.use_defaults(
     'charm.installed',
     'config.changed',
-    'update-status')
+    'update-status',
+    'upgrade-charm')
 
 
 @reactive.when('dashboard.available')
