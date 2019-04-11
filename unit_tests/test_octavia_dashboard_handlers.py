@@ -28,7 +28,8 @@ class TestRegisteredHooks(test_utils.TestRegisteredHooks):
         defaults = [
             'charm.installed',
             'config.changed',
-            'update-status']
+            'update-status',
+            'upgrade-charm']
         hook_set = {
             'when': {
                 'dashboard_available': (
