@@ -26,29 +26,29 @@ relations:
   - octavia-dashboard:dashboard
 applications:
   keystone:
-    charm: cs:~openstack-charmers-next/keystone
+    charm: cs:keystone
     num_units: 1
   mysql:
     constraints: mem=3072M
-    charm: cs:~openstack-charmers-next/percona-cluster
+    charm: cs:percona-cluster
     num_units: 1
   neutron-api:
-    charm: cs:~openstack-charmers-next/neutron-api
+    charm: cs:neutron-api
     num_units: 1
     options:
       neutron-security-groups: True
   neutron-openvswitch:
-    charm: cs:~openstack-charmers-next/neutron-openvswitch
+    charm: cs:neutron-openvswitch
     num_units: 0
   octavia:
-    charm: cs:~openstack-charmers-next/octavia
+    charm: cs:octavia
     num_units: 1
   openstack-dashboard:
-     charm: cs:~openstack-charmers-next/openstack-dashboard
+     charm: cs:openstack-dashboard
      num_units: 1
   octavia-dashboard:
      series: cosmic
      charm: ../../../octavia-dashboard
   rabbitmq-server:
-    charm: cs:~openstack-charmers-next/rabbitmq-server
+    charm: cs:rabbitmq-server
     num_units: 1
