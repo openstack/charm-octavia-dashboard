@@ -15,6 +15,6 @@ target_deploy_status:
     workload-status: blocked
     workload-status-message: Awaiting
 configure:
-- zaza.openstack.charm_tests.noop.setup.basic_setup
+- zaza.charm_tests.noop.setup.basic_setup
 tests:
-- zaza.openstack.charm_tests.noop.tests.NoopTest
+- zaza.charm_tests.noop.tests.NoopTest
