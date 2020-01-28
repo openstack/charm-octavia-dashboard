@@ -1,11 +1,12 @@
 charm_name: octavia-dashboard
 gate_bundles:
 - bionic-train
-- disco-stein
 - bionic-stein
 - bionic-rocky
 smoke_bundles:
 - bionic-train
+dev_bundles:
+- eoan-train
 comment: |
   Disable ``cosmic-rocky`` bundle pending SRU of ``octavia-dashboard`` package.
 target_deploy_status:

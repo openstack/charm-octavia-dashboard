@@ -8,7 +8,7 @@ tags:
 series:
   - bionic
   - cosmic
-  - disco
+  - eoan
 subordinate: true
 requires:
   dashboard:

@@ -15,8 +15,6 @@
 import charms_openstack.adapters
 import charms_openstack.charm
 
-import charmhelpers.fetch as ch_fetch
-
 
 class OctaviaDashboardCharm(charms_openstack.charm.OpenStackCharm):
     release = 'rocky'
@@ -26,15 +24,3 @@ class OctaviaDashboardCharm(charms_openstack.charm.OpenStackCharm):
     python_version = 3
     adapters_class = charms_openstack.adapters.OpenStackRelationAdapters
     required_relations = ['dashboard']
-
-    def install(self):
-        # NOTE(fnordahl) purge_packages is only honoured by charms.openstack
-        #                on OpenStack upgrade, not first install.
-        installed_purge_packages = list(
-            set(self.purge_packages) -
-            set(ch_fetch.filter_installed_packages(self.purge_packages))
-        )
-        if installed_purge_packages:
-            ch_fetch.apt_purge(packages=installed_purge_packages,
-                               fatal=True)
-        super().install()
