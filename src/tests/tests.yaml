@@ -7,8 +7,7 @@ smoke_bundles:
 - bionic-train
 dev_bundles:
 - eoan-train
-comment: |
-  Disable ``cosmic-rocky`` bundle pending SRU of ``octavia-dashboard`` package.
+comment:
 target_deploy_status:
   octavia:
     workload-status: blocked
