@@ -8,6 +8,8 @@ gate_bundles:
 smoke_bundles:
 - bionic-train
 dev_bundles:
+- groovy-victoria
+- focal-victoria
 - eoan-train
 comment:
 target_deploy_status:
@@ -20,4 +22,4 @@ tests:
 - zaza.charm_tests.noop.tests.NoopTest
 tests_options:
   force_deploy:
-    - focal-ussuri
+    - groovy-victoria
