@@ -1,5 +1,6 @@
 charm_name: octavia-dashboard
 gate_bundles:
+- focal-victoria
 - focal-ussuri
 - bionic-ussuri
 - bionic-train
@@ -9,7 +10,6 @@ smoke_bundles:
 - bionic-train
 dev_bundles:
 - groovy-victoria
-- focal-victoria
 - eoan-train
 comment:
 target_deploy_status:
