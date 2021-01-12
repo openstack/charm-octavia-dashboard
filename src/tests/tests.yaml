@@ -9,8 +9,6 @@ gate_bundles:
 - bionic-rocky
 smoke_bundles:
 - bionic-train
-dev_bundles:
-- eoan-train
 comment:
 target_deploy_status:
   octavia:
