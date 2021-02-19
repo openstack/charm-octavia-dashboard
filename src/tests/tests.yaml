@@ -6,9 +6,10 @@ gate_bundles:
 - bionic-ussuri
 - bionic-train
 - bionic-stein
-- bionic-rocky
 smoke_bundles:
 - bionic-train
+dev_bundles:
+- bionic-rocky
 comment:
 target_deploy_status:
   octavia:
