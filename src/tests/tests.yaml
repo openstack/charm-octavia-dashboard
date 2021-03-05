@@ -1,24 +1,34 @@
 charm_name: octavia-dashboard
+
 gate_bundles:
 - groovy-victoria
+- focal-wallaby
 - focal-victoria
 - focal-ussuri
 - bionic-ussuri
 - bionic-train
 - bionic-stein
+
 smoke_bundles:
 - bionic-train
+
 dev_bundles:
+- hirsute-wallaby
 - bionic-rocky
+
 comment:
+
 target_deploy_status:
   octavia:
     workload-status: blocked
     workload-status-message: Awaiting
+
 configure:
 - zaza.charm_tests.noop.setup.basic_setup
+
 tests:
 - zaza.charm_tests.noop.tests.NoopTest
+
 tests_options:
   force_deploy:
-    - groovy-victoria
+    - hirsute-wallaby
