@@ -2,7 +2,6 @@ charm_name: octavia-dashboard
 
 gate_bundles:
 - focal-xena
-- impish-xena
 
 smoke_bundles:
 - focal-xena
@@ -26,5 +25,4 @@ tests:
 
 tests_options:
   force_deploy:
-    - impish-xena
     - jammy-yoga
