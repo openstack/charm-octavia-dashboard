@@ -1,22 +1,13 @@
 charm_name: octavia-dashboard
 
 gate_bundles:
-- hirsute-wallaby
-- focal-wallaby
 - focal-victoria
 - focal-ussuri
-- bionic-ussuri
-- bionic-train
-- bionic-stein
 
 smoke_bundles:
-- bionic-train
+- focal-victoria
 
-dev_bundles:
-- bionic-rocky
-- focal-xena
-- groovy-victoria
-- impish-xena
+dev_bundles: []
 
 comment:
 
@@ -32,6 +23,4 @@ tests:
 - zaza.charm_tests.noop.tests.NoopTest
 
 tests_options:
-  force_deploy:
-    - groovy-victoria
-    - impish-xena
+  force_deploy: []
