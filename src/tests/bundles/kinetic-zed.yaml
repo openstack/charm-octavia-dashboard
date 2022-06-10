@@ -1,7 +1,7 @@
 variables:
-  openstack-origin: &openstack-origin cloud:focal-xena
+  openstack-origin: &openstack-origin distro
 
-series: focal
+series: kinetic
 
 comment:
   - 'machines section to decide order of deployment. database sooner = faster'
@@ -98,7 +98,7 @@ applications:
     channel: latest/edge
 
   octavia-dashboard:
-     charm: ../../../octavia-dashboard_ubuntu-20.04-amd64.charm
+     charm: ../../../octavia-dashboard_ubuntu-22.04-amd64_ubuntu-22.10-amd64.charm
 
 relations:
 
