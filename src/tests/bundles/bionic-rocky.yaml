@@ -1,3 +1,5 @@
+local_overlay_enabled: False
+
 series: bionic
 relations:
 - - mysql:shared-db
@@ -26,39 +28,46 @@ relations:
   - octavia-dashboard:dashboard
 applications:
   keystone:
-    charm: cs:~openstack-charmers/keystone
+    charm: ch:keystone
     num_units: 1
     options:
       openstack-origin: cloud:bionic-rocky
+    channel: train/edge
   mysql:
     constraints: mem=3072M
-    charm: cs:~openstack-charmers/percona-cluster
+    charm: ch:percona-cluster
     num_units: 1
+    channel: 5.7/edge
   neutron-api:
-    charm: cs:~openstack-charmers/neutron-api
+    charm: ch:neutron-api
     num_units: 1
     options:
       openstack-origin: cloud:bionic-rocky
       neutron-security-groups: True
+    channel: train/edge
   neutron-openvswitch:
     series: bionic
-    charm: cs:~openstack-charmers/neutron-openvswitch
+    charm: ch:neutron-openvswitch
     num_units: 0
+    channel: train/edge
   octavia:
     series: bionic
-    charm: cs:~openstack-charmers/octavia
+    charm: ch:octavia
     num_units: 1
     options:
       openstack-origin: cloud:bionic-rocky
+    channel: train/edge
   openstack-dashboard:
      series: bionic
-     charm: cs:~openstack-charmers/openstack-dashboard
+     charm: ch:openstack-dashboard
      num_units: 1
      options:
        openstack-origin: cloud:bionic-rocky
+     channel: train/edge
   octavia-dashboard:
      series: bionic
-     charm: ../../../octavia-dashboard
+     charm: ../../../octavia-dashboard.charm
   rabbitmq-server:
-    charm: cs:~openstack-charmers/rabbitmq-server
+    charm: ch:rabbitmq-server
     num_units: 1
+    channel: 3.6/edge
