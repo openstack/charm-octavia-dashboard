@@ -98,7 +98,7 @@ applications:
     channel: latest/edge
 
   octavia-dashboard:
-     charm: ../../../octavia-dashboard
+     charm: ../../../octavia-dashboard_ubuntu-20.04-amd64.charm
 
 relations:
 
