@@ -1,5 +1,5 @@
 variables:
-  openstack-origin: &openstack-origin cloud:jammy-zed
+  openstack-origin: &openstack-origin cloud:jammy-bobcat
 
 series: jammy
 
@@ -96,7 +96,7 @@ applications:
     channel: latest/edge
 
   octavia-dashboard:
-     charm: ../../../octavia-dashboard_ubuntu-22.04-amd64_ubuntu-22.10-amd64_ubuntu-23.04-amd64.charm
+     charm: ../../../octavia-dashboard_ubuntu-22.04-amd64.charm
 
 relations:
 
