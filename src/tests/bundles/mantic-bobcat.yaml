@@ -22,16 +22,16 @@ applications:
 
   keystone-mysql-router:
     charm: ch:mysql-router
-    channel: latest/edge
+    channel: 8.0/edge
   neutron-api-mysql-router:
     charm: ch:mysql-router
-    channel: latest/edge
+    channel: 8.0/edge
   octavia-mysql-router:
     charm: ch:mysql-router
-    channel: latest/edge
+    channel: 8.0/edge
   openstack-dashboard-mysql-router:
     charm: ch:mysql-router
-    channel: latest/edge
+    channel: 8.0/edge
 
   mysql-innodb-cluster:
     charm: ch:mysql-innodb-cluster
@@ -42,7 +42,7 @@ applications:
       - '0'
       - '1'
       - '2'
-    channel: latest/edge
+    channel: 8.0/edge
 
   keystone:
     charm: ch:keystone
@@ -51,14 +51,14 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '3'
-    channel: latest/edge
+    channel: 2023.2/edge
 
   rabbitmq-server:
     charm: ch:rabbitmq-server
     num_units: 1
     to:
       - '4'
-    channel: latest/edge
+    channel: 3.9/edge
 
   neutron-api:
     charm: ch:neutron-api
@@ -70,12 +70,12 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '5'
-    channel: latest/edge
+    channel: 2023.2/edge
 
   neutron-openvswitch:
     charm: ch:neutron-openvswitch
     num_units: 0
-    channel: latest/edge
+    channel: 2023.2/edge
 
   octavia:
     charm: ch:octavia
@@ -84,7 +84,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '6'
-    channel: latest/edge
+    channel: 2023.2/edge
 
   openstack-dashboard:
     charm: ch:openstack-dashboard
@@ -93,7 +93,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '7'
-    channel: latest/edge
+    channel: 2023.2/edge
 
   octavia-dashboard:
      charm: ../../../octavia-dashboard_ubuntu-23.10-amd64.charm
