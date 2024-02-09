@@ -1,7 +1,7 @@
 variables:
-  openstack-origin: &openstack-origin distro
+  openstack-origin: &openstack-origin cloud:jammy-caracal
 
-series: lunar
+series: jammy
 
 comment:
   - 'machines section to decide order of deployment. database sooner = faster'
@@ -51,7 +51,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '3'
-    channel: latest/edge
+    channel: 2024.1/edge
 
   rabbitmq-server:
     charm: ch:rabbitmq-server
@@ -70,12 +70,12 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '5'
-    channel: latest/edge
+    channel: 2024.1/edge
 
   neutron-openvswitch:
     charm: ch:neutron-openvswitch
     num_units: 0
-    channel: latest/edge
+    channel: 2024.1/edge
 
   octavia:
     charm: ch:octavia
@@ -84,7 +84,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '6'
-    channel: latest/edge
+    channel: 2024.1/edge
 
   openstack-dashboard:
     charm: ch:openstack-dashboard
@@ -93,10 +93,10 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '7'
-    channel: latest/edge
+    channel: 2024.1/edge
 
   octavia-dashboard:
-     charm: ../../../octavia-dashboard_ubuntu-23.04-amd64.charm
+     charm: ../../../octavia-dashboard_ubuntu-22.04-amd64.charm
 
 relations:
 
