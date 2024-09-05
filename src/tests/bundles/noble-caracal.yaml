@@ -51,7 +51,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '3'
-    channel: 2024.1/edge
+    channel: latest/edge
 
   rabbitmq-server:
     charm: ch:rabbitmq-server
@@ -70,12 +70,12 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '5'
-    channel: 2024.1/edge
+    channel: latest/edge
 
   neutron-openvswitch:
     charm: ch:neutron-openvswitch
     num_units: 0
-    channel: 2024.1/edge
+    channel: latest/edge
 
   octavia:
     charm: ch:octavia
@@ -84,7 +84,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '6'
-    channel: 2024.1/edge
+    channel: latest/edge
 
   openstack-dashboard:
     charm: ch:openstack-dashboard
@@ -93,7 +93,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '7'
-    channel: 2024.1/edge
+    channel: latest/edge
 
   octavia-dashboard:
      charm: ../../../octavia-dashboard_ubuntu-22.04-amd64.charm

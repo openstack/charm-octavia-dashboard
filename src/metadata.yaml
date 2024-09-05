@@ -5,8 +5,6 @@ description: |
   This is the dashboard for the OpenStack LBaaS service, Octavia.
 tags:
   - openstack
-series:
-  - jammy
 subordinate: true
 requires:
   dashboard:
