@@ -4,7 +4,9 @@
 #     https://github.com/openstack-charmers/release-tools
 #
 pyparsing<3.0.0  # aodhclient is pinned in zaza and needs pyparsing < 3.0.0, but cffi also needs it, so pin here.
-setuptools<50.0.0  # https://github.com/pypa/setuptools/commit/04e3df22df840c6bb244e9b27bc56750c44b7c85
+# setuptools>=65.3.0 is required for Python 3.12 (Noble); pkgutil.ImpImporter
+# was removed in 3.12 and older setuptools used it in pkg_resources.
+setuptools<69.0.0
 
 stestr>=2.2.0
 

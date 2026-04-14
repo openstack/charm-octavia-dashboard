@@ -84,7 +84,7 @@
       "type": "python_module",
       "package": "setuptools",
       "vcs": null,
-      "version": "62.1.0"
+      "version": "68.2.2"
     },
     {
       "type": "python_module",
