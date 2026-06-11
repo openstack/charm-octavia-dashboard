@@ -4,6 +4,7 @@ parts:
   charm:
     plugin: reactive
     reactive-charm-build-arguments:
+      - --verbose
       - --binary-wheels-from-source
       - --use-lock-file-branches
     build-packages:
@@ -12,8 +13,6 @@ parts:
       - python3-dev
       - libffi-dev
       - libssl-dev
-      - rustc
-      - cargo
     source: src/
     build-snaps:
       - charm/3.x/stable
@@ -23,9 +22,9 @@ parts:
 platforms:
   ubuntu@22.04:amd64:
   ubuntu@22.04:arm64:
-  ubuntu@22.04:s390x:
   ubuntu@22.04:ppc64el:
+  ubuntu@22.04:s390x:
   ubuntu@24.04:amd64:
   ubuntu@24.04:arm64:
-  ubuntu@24.04:s390x:
   ubuntu@24.04:ppc64el:
+  ubuntu@24.04:s390x:

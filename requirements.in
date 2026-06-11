@@ -6,7 +6,7 @@
                                                                                                                                                                                                                                                                                                              
 # setuptools>=65.3.0 is required for Python 3.12 (Noble); pkgutil.ImpImporter
 # was removed in 3.12 and older setuptools used it in pkg_resources.
-setuptools<69.0.0
+setuptools<82.0.0
 
 # NOTE: newer versions of cryptography require a Rust compiler to build,
 # see
