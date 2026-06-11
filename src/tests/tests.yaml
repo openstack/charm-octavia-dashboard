@@ -8,7 +8,6 @@ smoke_bundles:
 
 dev_bundles:
 - jammy-bobcat
-- mantic-bobcat
 
 comment:
 
@@ -25,4 +24,3 @@ tests:
 
 tests_options:
   force_deploy:
-    - mantic-bobcat
